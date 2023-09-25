@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "notes-api"
+version = "0.1.0"
+description = "The backend for taking notes."
+authors = [
+    "Robert Leu <leuroby@gmail.com>",
+    "Price Hiller <price@orion-technologies.io>"
+]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "notes_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^2.3.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
