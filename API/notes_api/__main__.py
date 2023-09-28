@@ -1,3 +1,4 @@
+from fastapi.responses import RedirectResponse
 import uvicorn
 from fastapi import FastAPI
 
@@ -6,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return RedirectResponse("/docs")
 
 
 if __name__ == "__main__":
